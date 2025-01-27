@@ -44,10 +44,10 @@ curl --request POST \
     --data '{"query":"{\n     superhero(id: 1) {\n       heroId\n       heroName\n       realName\n        creationYear\n }\n   }","variables":{}}' 
 ```
 
+The purpose is mostly to demonstrate the devcontainer and the postgress db features when run in a Docker container, so security was never an issue here 🤷‍♀️
 
+Oh - and by the way, debugging is set-up to work out-of-the-box.
 
-The purpose is mostly to demonstrate the devcontiner and the postgress features, so security was never an issue here 🤷‍♀️
+So try the following: Make breakpoint in the resolver function in `server.js` (e.g. [line #42](https://github.com/lakruzz/node-postgres-sample/blob/95e3253217265050ac32b4786c2e6444184a00f2/server.js#L42)). Start the server from the debugger and execute the `curl` statement above. You are not in control 🎆
 
-Oh - nad by the way, debugging is set-up to work out-of-the-box.
-
-Make breakpoint in the `server.js`. Start the server from the debugger and execute the `curl` statement above.
+_Happy DevX and Happy Hacking_
